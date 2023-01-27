@@ -15,7 +15,7 @@ class Table extends React.Component {
   componentDidMount() {
     axios.get('getData')
       .then(response => {
-        console.log(response.data);
+        //console.log(response.data);
         this.setState({ data: response.data });
       });
     }

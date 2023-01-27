@@ -22,3 +22,4 @@ Auth::routes();
 Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Route::get('/getData' , [App\Http\Controllers\DataController::class, 'getData'] );
+Route::post('/getEmployeeData' , [App\Http\Controllers\DataController::class, 'getEmployeeData'] );

@@ -14,4 +14,14 @@ class DataController extends Controller
         return response()->json($employees);
     }
 
+    public function getEmployeeData(Request $req){
+        try {
+            $employee = Employee::findOrFail($req->get('employeeID'));
+            return response()->json($employee);
+
+        } catch (ModelNotFoundException $e) {
+            return response()->json(['error' => 'User not found']);
+        }
+    }
+
 }
