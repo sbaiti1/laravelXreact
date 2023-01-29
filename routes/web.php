@@ -23,3 +23,4 @@ Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('ho
 
 Route::get('/getData' , [App\Http\Controllers\DataController::class, 'getData'] );
 Route::post('/getEmployeeData' , [App\Http\Controllers\DataController::class, 'getEmployeeData'] );
+Route::post('/update' , [App\Http\Controllers\DataController::class, 'updateEmployee'] );

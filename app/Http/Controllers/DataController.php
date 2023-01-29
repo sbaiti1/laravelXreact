@@ -24,4 +24,19 @@ class DataController extends Controller
         }
     }
 
+    //updating employee data
+     public function updateEmployee(Request $req)
+    {
+        $id = $req->get('id');
+        $employee_name = $req->get('employee_name');
+        $salary = $req->get('salary');
+
+        Employee::where('id' , $id)->update([
+            'employee_name' => $employee_name , 
+            'salary' => $salary ,
+
+        ]);
+
+    }
+
 }
